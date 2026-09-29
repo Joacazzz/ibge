@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesquisa Presidencial Histórica"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Em qual destes presidentes você votaria?"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPresidents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton
+            android:id="@+id/rbGetulio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Getúlio Vargas"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbFhc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fernando Henrique"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbJango"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="João Goulart"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbNilo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nilo Peçanha"
+            android:textSize="16sp"
+            android:padding="8dp" />
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmitVote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar Voto"
+        android:padding="12dp" />
+
+</LinearLayout>

@@ -1,0 +1,295 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3766), pid=24980, tid=14936
+#
+# JRE version:  (25.0.2) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.0.2+-15348964-b329.117, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Djava.awt.headless=true -Djava.library.path=C:\Program Files\Android\Android Studio\jbr\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Users\Aluno\AppData\Local\Programs\Python\Python314\Scripts\;C:\Users\Aluno\AppData\Local\Programs\Python\Python314\;C:\Users\Aluno\AppData\Local\Microsoft\WindowsApps;C:\Users\Aluno\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Aluno\.dotnet\tools;C:\Users\Aluno\AppData\Roaming\npm;.;C:\Users\Aluno\AndroidStudioProjects\IBGE\app\src\testDebug\jniLibs;C:\Users\Aluno\AndroidStudioProjects\IBGE\app\src\test\jniLibs -Dorg.gradle.internal.worker.tmpdir=C:\Users\Aluno\AndroidStudioProjects\IBGE\app\build\tmp\testDebugUnitTest\work --add-opens=java.base/java.io=ALL-UNNAMED -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=BR -Duser.language=pt -Duser.variant -ea worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 2'
+
+Host: 13th Gen Intel(R) Core(TM) i5-1345U, 12 cores, 15G,  Windows 11 , 64 bit Build 26100 (10.0.26100.9168)
+Time: Mon Sep 28 22:00:34 2026 Hora oficial do Brasil elapsed time: 2.036256 seconds (0d 0h 0m 2s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002400afae990):  JavaThread "Unknown thread" [_thread_in_vm, id=14936, stack(0x000000cf26800000,0x000000cf26900000) (1024K)]
+
+Stack: [0x000000cf26800000,0x000000cf26900000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x7bd439]  (no source info available)
+V  [jvm.dll+0x78763d]  (no source info available)
+V  [jvm.dll+0xa0c885]  (no source info available)
+V  [jvm.dll+0xa0ef04]  (no source info available)
+V  [jvm.dll+0xa0f603]  (no source info available)
+V  [jvm.dll+0x309bf6]  (no source info available)
+V  [jvm.dll+0x7b9545]  (no source info available)
+V  [jvm.dll+0x7ac047]  (no source info available)
+V  [jvm.dll+0x3fdeab]  (no source info available)
+V  [jvm.dll+0x406066]  (no source info available)
+V  [jvm.dll+0x3f2516]  (no source info available)
+V  [jvm.dll+0x3f27f8]  (no source info available)
+V  [jvm.dll+0x3c7b82]  (no source info available)
+V  [jvm.dll+0x3c899e]  (no source info available)
+V  [jvm.dll+0x9d195f]  (no source info available)
+V  [jvm.dll+0x4643b2]  (no source info available)
+V  [jvm.dll+0x9b5762]  (no source info available)
+V  [jvm.dll+0x50685e]  (no source info available)
+V  [jvm.dll+0x5080e1]  (no source info available)
+C  [jli.dll+0x53d5]  (no source info available)
+C  [ucrtbase.dll+0x2cd30]  (no source info available)
+C  [KERNEL32.DLL+0x2ccb7]  (no source info available)
+C  [ntdll.dll+0xaad6c]  (no source info available)
+
+Lock stack of current Java thread (top to bottom):
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffa3e3fec08, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x000002400afdef70 WorkerThread "GC Thread#0"                     [id=21376, stack(0x000000cf26900000,0x000000cf26a00000) (1024K)]
+  0x000002400afe6040 ConcurrentGCThread "G1 Main Marker"            [id=28224, stack(0x000000cf26a00000,0x000000cf26b00000) (1024K)]
+  0x000002400afe7ac0 WorkerThread "G1 Conc#0"                       [id=27944, stack(0x000000cf26b00000,0x000000cf26c00000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa3da7cffa]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffa3e484818] Heap_lock - owner thread: 0x000002400afae990
+
+Heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+UseCompressedClassPointers 1, UseCompactObjectHeaders 0
+Narrow klass pointer bits 32, Max shift 3
+Narrow klass base: 0xffffffffffffffff, Narrow klass shift: -1
+Encoding Range: [0xffffffffffffffff - 0x000000007fffffff), (2147483648 bytes)
+Klass Range:    [0x0000000000000000 - 0x0000000000000000), (0 bytes)
+Klass ID Range:  [4294967295 - 0) (1)
+No protection zone.
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 10 size 36 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total reserved 524288K, committed 0K, used 0K [0x00000000e0000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+
+Card table byte_map: [0x000002401f840000,0x000002401f940000] _byte_map_base: 0x000002401f140000
+
+Marking Bits: (CMBitMap*) 0x000002400afdf700
+ Bits: [0x000002401f940000, 0x0000024020140000)
+
+GC Heap Usage History (0 events):
+No events
+
+Metaspace Usage History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.008 Loaded shared library C:\Program Files\Android\Android Studio\jbr\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff725e30000 - 0x00007ff725e3a000 	C:\Program Files\Android\Android Studio\jbr\bin\java.exe
+0x00007ffaaf560000 - 0x00007ffaaf7c6000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007ffaae890000 - 0x00007ffaae959000 	C:\windows\System32\KERNEL32.DLL
+0x00007ffaac770000 - 0x00007ffaacb6f000 	C:\windows\System32\KERNELBASE.dll
+0x00007ffaacb80000 - 0x00007ffaacccc000 	C:\windows\System32\ucrtbase.dll
+0x00007ffaa4730000 - 0x00007ffaa474b000 	C:\Program Files\Android\Android Studio\jbr\bin\VCRUNTIME140.dll
+0x00007ffaa6e70000 - 0x00007ffaa6e86000 	C:\Program Files\Android\Android Studio\jbr\bin\jli.dll
+0x00007ffaae150000 - 0x00007ffaae316000 	C:\windows\System32\USER32.dll
+0x00007ffaacce0000 - 0x00007ffaacd07000 	C:\windows\System32\win32u.dll
+0x00007ffaaf220000 - 0x00007ffaaf24b000 	C:\windows\System32\GDI32.dll
+0x00007ffaad0a0000 - 0x00007ffaad1c9000 	C:\windows\System32\gdi32full.dll
+0x00007ffaacd10000 - 0x00007ffaacdb3000 	C:\windows\System32\msvcp_win.dll
+0x00007ffa825f0000 - 0x00007ffa82881000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.8972_none_3e0da176e32f9d4b\COMCTL32.dll
+0x00007ffaae340000 - 0x00007ffaae3e9000 	C:\windows\System32\msvcrt.dll
+0x00007ffaaf1e0000 - 0x00007ffaaf212000 	C:\windows\System32\IMM32.DLL
+0x00007ffaa88a0000 - 0x00007ffaa88ac000 	C:\Program Files\Android\Android Studio\jbr\bin\vcruntime140_1.dll
+0x00007ffa87ba0000 - 0x00007ffa87c2d000 	C:\Program Files\Android\Android Studio\jbr\bin\msvcp140.dll
+0x00007ffa3d6a0000 - 0x00007ffa3e57a000 	C:\Program Files\Android\Android Studio\jbr\bin\server\jvm.dll
+0x00007ffaae9b0000 - 0x00007ffaaea6c000 	C:\windows\System32\ADVAPI32.dll
+0x00007ffaaf3e0000 - 0x00007ffaaf48a000 	C:\windows\System32\sechost.dll
+0x00007ffaaed30000 - 0x00007ffaaee48000 	C:\windows\System32\RPCRT4.dll
+0x00007ffaae090000 - 0x00007ffaae112000 	C:\windows\System32\WS2_32.dll
+0x00007ffaac5f0000 - 0x00007ffaac64e000 	C:\windows\SYSTEM32\POWRPROF.dll
+0x00007ffaa5900000 - 0x00007ffaa5936000 	C:\windows\SYSTEM32\WINMM.dll
+0x00007ffa98ee0000 - 0x00007ffa98eeb000 	C:\windows\SYSTEM32\VERSION.dll
+0x00007ffaac5d0000 - 0x00007ffaac5e5000 	C:\windows\SYSTEM32\UMPDC.dll
+0x00007ffaab420000 - 0x00007ffaab43b000 	C:\windows\SYSTEM32\kernel.appcore.dll
+0x00007ffaa4720000 - 0x00007ffaa472a000 	C:\Program Files\Android\Android Studio\jbr\bin\jimage.dll
+0x00007ffaa9f10000 - 0x00007ffaaa152000 	C:\windows\SYSTEM32\DBGHELP.DLL
+0x00007ffaaee50000 - 0x00007ffaaf1d5000 	C:\windows\System32\combase.dll
+0x00007ffaae460000 - 0x00007ffaae539000 	C:\windows\System32\OLEAUT32.dll
+0x00007ffa89a70000 - 0x00007ffa89aab000 	C:\windows\SYSTEM32\dbgcore.DLL
+0x00007ffaacdc0000 - 0x00007ffaace6c000 	C:\windows\System32\bcryptPrimitives.dll
+0x00007ffaa4700000 - 0x00007ffaa471f000 	C:\Program Files\Android\Android Studio\jbr\bin\java.dll
+0x00007ffaaeb90000 - 0x00007ffaaed29000 	C:\windows\System32\ole32.dll
+0x00007ffaad470000 - 0x00007ffaadbf8000 	C:\windows\System32\SHELL32.dll
+
+JVMTI agents: none
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Android\Android Studio\jbr\bin;C:\windows\SYSTEM32;C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.8972_none_3e0da176e32f9d4b;C:\Program Files\Android\Android Studio\jbr\bin\server
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Djava.library.path=C:\Program Files\Android\Android Studio\jbr\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Users\Aluno\AppData\Local\Programs\Python\Python314\Scripts\;C:\Users\Aluno\AppData\Local\Programs\Python\Python314\;C:\Users\Aluno\AppData\Local\Microsoft\WindowsApps;C:\Users\Aluno\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Aluno\.dotnet\tools;C:\Users\Aluno\AppData\Roaming\npm;.;C:\Users\Aluno\AndroidStudioProjects\IBGE\app\src\testDebug\jniLibs;C:\Users\Aluno\AndroidStudioProjects\IBGE\app\src\test\jniLibs -Dorg.gradle.internal.worker.tmpdir=C:\Users\Aluno\AndroidStudioProjects\IBGE\app\build\tmp\testDebugUnitTest\work --add-opens=java.base/java.io=ALL-UNNAMED -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=BR -Duser.language=pt -Duser.variant -ea 
+java_command: worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 2'
+java_class_path (initial): C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\workerMain\\gradle-worker.jar;C:\\Users\\Aluno\\AndroidStudioProjects\\IBGE\\app\\build\\intermediates\\built_in_kotlinc\\debugUnitTest\\compileDebugUnitTestKotlin\\classes;C:\\Users\\Aluno\\AndroidStudioProjects\\IBGE\\app\\build\\intermediates\\java_res\\debugUnitTest\\processDebugUnitTestJavaRes\\out;C:\\Users\\Aluno\\AndroidStudioProjects\\IBGE\\app\\build\\intermediates\\runtime_app_classes_jar\\debug\\bundleDebugClassesToRuntimeJar\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\junit\\junit\\4.13.2\\8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12\\junit-4.13.2.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\ad0e90fceec01986deb0046f92a653e5\\transformed\\viewbinding-9.3.3-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\c76b7ba27ceb4a92d0ceee7159c11a67\\transformed\\material-1.12.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d1739e37834def401753ad8b80d7cd0c\\transformed\\constraintlayout-2.0.1-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\2eee5b03a251c15d31a69a73412a81f0\\transformed\\appcompat-resources-1.6.1-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\1e6ed45ccee95d8f2278a55dc99150a1\\transformed\\appcompat-1.6.1-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\1b50d248b3650aafecd94d66d2d0bf66\\transformed\\material3-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\5de41318bdc82ac97909aef760907ebe\\transformed\\material-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\9ab6203de8b663fe8b318c9121499d39\\transformed\\material-ripple-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\f2b0c2314a7ea622723506ccdfcf63f9\\transformed\\foundation-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e00dc2e98ac937f4d86e721c7192d3e4\\transformed\\animation-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\3a3fbf73a58e53d6202f9135b599b1d5\\transformed\\foundation-layout-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\3d859254937392ba5df760f27dec19fb\\transformed\\animation-core-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\ce9a8730f3293413a0fb60099e2e3813\\transformed\\ui-tooling-data-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d2b36e62397777518b78ce97a8fde117\\transformed\\ui-unit-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d57398adc00529276b68f436ec495b42\\transformed\\ui-geometry-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\8d70b1c5432db8044b0b61dfa98303e9\\transformed\\ui-util-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\41f70c46aa013ad7cdf505e49e5bbbd5\\transformed\\ui-text-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0846426281003e4ecd53e2beae497e31\\transformed\\ui-tooling-preview-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e8c903c0c1d82c54faa187a0311f4ea7\\transformed\\ui-tooling-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\c25d8da36bd1eee0f6dc71c026b06b4f\\transformed\\ui-graphics-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\7d34cef9315f8c8e926e82f6de1b4d15\\transformed\\navigationevent-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0e0cd826ea7ae902b8b1f9a0af964d00\\transformed\\navigationevent-compose-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\8e7dc29c234b2c1ee6b7c627bfee4e20\\transformed\\material-icons-extended-release-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\572a4e9608067c82c1a899e3c71cda2d\\transformed\\material-icons-core-release-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\3d83cf583786c37882cd4343f67e147b\\transformed\\ui-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\46e1999b25284f04da180f6c32f97b9d\\transformed\\ui-test-manifest-1.10.4-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\72aed62580fb99dcd0a5253ac909bbd4\\transformed\\viewpager2-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d0bdd799c682c1d33af6be03704fed84\\transformed\\fragment-1.3.6-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\cab24422e7f6212b1499c78309f7d378\\transformed\\activity-ktx-1.13.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\db9767dad3cc803da592460b0423ac70\\transformed\\activity-1.13.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\4479f7ef36cd73746687c132e9a1031a\\transformed\\activity-compose-1.13.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\f0e6340973632270487530963aa77050\\transformed\\coordinatorlayout-1.1.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e6e8594977cd4198a3ffb04efcf6300f\\transformed\\drawerlayout-1.1.1-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0e1f4c22fa79ef2bff292eeaf626fd76\\transformed\\transition-1.6.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\dbccf4be3144df5a58d2eb8a513528ee\\transformed\\dynamicanimation-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\eda2b2f603f5e7af0942d07843580b4e\\transformed\\vectordrawable-animated-1.1.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\15b9fdd14a1d47633f03afaa131c2de0\\transformed\\vectordrawable-1.1.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\296d0df5d4ab48f0982091aa29161dd6\\transformed\\recyclerview-1.1.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\3b12e1ba3f92f254807cc7f48f177197\\transformed\\viewpager-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\628219f1005f67e76f750118297e45bb\\transformed\\customview-1.1.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e4f84adc0f9154d7e8d7c4f15ea2b980\\transformed\\legacy-support-core-utils-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\4aef0679e59485a3c29f627b1dec937a\\transformed\\loader-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\705a0f568235421c8baa1496929e5f10\\transformed\\autofill-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\5e15cc78ad0602a83c96afbe20adbd9b\\transformed\\window-core-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\9393da9e67f470ce28432af9166c727e\\transformed\\window-1.5.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\cb31e969ef8ffdb4798a02dfe5c0c592\\transformed\\graphics-path-1.0.1-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\df0c82e3a90c989771d9c48d9f9e034d\\transformed\\emoji2-views-helper-1.4.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\dceadf20ef856b039cc0c70d4bb28623\\transformed\\emoji2-1.4.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d3a22bfd44a5feb7b3d67474b51f5daf\\transformed\\core-1.19.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e887e033df79b767d9cc3452f63c0cb5\\transformed\\customview-poolingcontainer-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\320fb66231cfae2d30a20800d59a6d43\\transformed\\lifecycle-process-2.9.4-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0816ede9f2753a07b1efb120d08c11ac\\transformed\\lifecycle-livedata-core-ktx-2.9.4-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\99c5b9b5cf5258df29e0f731cf403d36\\transformed\\lifecycle-runtime-ktx-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\1895c72e0b9e2db8e0d1238f9573e5bc\\transformed\\lifecycle-livedata-2.9.4-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\b1a49c403f59dc9e4a9330907aa7582f\\transformed\\lifecycle-viewmodel-ktx-2.9.4-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\12e78c07f510fd016e42734605a7c7d5\\transformed\\lifecycle-livedata-core-2.9.4-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\androidx.lifecycle\\lifecycle-common-java8\\2.9.4\\86a8e6b9d0ba0c964fdc7223a38b6ce74bcb24dd\\lifecycle-common-java8-2.9.4.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e661ee95c8f339b431bbfdd21c0ea91b\\transformed\\lifecycle-viewmodel-2.9.4-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\11e238333c723904c09e1c8a045e1326\\transformed\\lifecycle-viewmodel-release-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0360886a0748ad6ea6812831c964a06a\\transformed\\runtime-annotation-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\56454593110a432a2d8f3202a84e25b0\\transformed\\runtime-retain-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\6e4c6e1222ff63e72408e5954dbd9fc0\\transformed\\savedstate-release-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\ad707d938897f4fd45fd64880eba8c3a\\transformed\\savedstate-ktx-1.3.2-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\9929b05fa6921025dbada636520b22c0\\transformed\\savedstate-compose-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\070665f721cb94cd90d9b5f21d4d5f6c\\transformed\\runtime-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\c4d30ca5a9af28752ac8af20e2d193a5\\transformed\\runtime-saveable-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\cdf7a993002022b9dc50083477a4f126\\transformed\\lifecycle-runtime-compose-release-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\androidx.lifecycle\\lifecycle-common-jvm\\2.9.4\\ab739bccdb3541983385af169565c7c035d897e7\\lifecycle-common-jvm-2.9.4.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\1f79f8320d992e9d1bc8bfe2a88718ba\\transformed\\lifecycle-runtime-release-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\54622a80bd780d7c86f65ef8f18a233e\\transformed\\lifecycle-viewmodel-savedstate-release-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\4629ac74de0ad574b5666e6f1a0df904\\transformed\\core-ktx-1.19.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d2286783df4982c803c5caf711026cb1\\transformed\\core-viewtree-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-coroutines-android\\1.9.0\\6cf3b8df5a2ce8c6b0dffe55657a827c405ee2fe\\kotlinx-coroutines-android-1.9.0.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-coroutines-core-jvm\\1.9.0\\9beade4c1c1569e4f36cbd2c37e02e3e41502601\\kotlinx-coroutines-core-jvm-1.9.0.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\16928b8ce80d079f8c5f359285a6c6b0\\transformed\\annotation-experimental-1.4.1-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0d210c696e92df8aaa284c434c691f14\\transformed\\cardview-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\androidx.resourceinspection\\resourceinspection-annotation\\1.0.1\\8c21f8ff5d96d5d52c948707f7e4d6ca6773feef\\resourceinspection-annotation-1.0.1.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\87fd9f161b076b7afbb4f09efdd67a3b\\transformed\\cursoradapter-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\3df781783ff7f0087ad8e163c59f09f2\\transformed\\profileinstaller-1.4.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\865e39a57bd6ba43a22415e1d0cb1a5f\\transformed\\startup-runtime-1.1.1-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\309a47ba9dd69a4f90496d238a1ae451\\transformed\\tracing-1.2.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\2b8dc94f13e79b975e85211a6df4695b\\transformed\\interpolator-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\9aecb098f0b5ec8b334138fc4605ebe2\\transformed\\versionedparcelable-1.1.1-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\3a72146b3f14eb1bd52477e2b23b5a7d\\transformed\\documentfile-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e97dceaa8e86eba419614e30e5d932a2\\transformed\\localbroadcastmanager-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\282e22fff940e8fc69fbf336ad8ee12c\\transformed\\print-1.0.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\androidx.concurrent\\concurrent-futures\\1.1.0\\50b7fb98350d5f42a4e49704b03278542293ba48\\concurrent-futures-1.1.0.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d3761323ea8fe87bf06d7427fca92961\\transformed\\core-runtime-2.2.0-runtime.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\androidx.arch.core\\core-common\\2.2.0\\5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3\\core-common-2.2.0.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\androidx.collection\\collection-ktx\\1.5.0\\27c78a926a16a1bf792b2285cf2834e8caae4a07\\collection-ktx-1.5.0.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\androidx.collection\\collection-jvm\\1.5.0\\7ba2c69414d46ebc2dd76598bdd0a75c54281a57\\collection-jvm-1.5.0.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\androidx.annotation\\annotation-jvm\\1.10.0\\388cfaa79001d0f024d28f6a13d5a3dfc2f0e18f\\annotation-jvm-1.10.0.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-serialization-core-jvm\\1.7.3\\1f226780b845ff9206474c05159245d861556249\\kotlinx-serialization-core-jvm-1.7.3.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib\\2.2.10\\30de6faa127a4a012db8e71bf1b9c0a99b1402b2\\kotlin-stdlib-2.2.10.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\org.hamcrest\\hamcrest-core\\1.3\\42a25dc3219429f0e5d060061f71acb49bf010a0\\hamcrest-core-1.3.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains\\annotations\\23.0.0\\8cc20c07506ec18e0834947b84a864bfc094484e\\annotations-23.0.0.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\com.google.errorprone\\error_prone_annotations\\2.15.0\\38c8485a652f808c8c149150da4e5c2b0bd17f9a\\error_prone_annotations-2.15.0.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\androidx.constraintlayout\\constraintlayout-solver\\2.0.1\\30988fe2d77f3fe3bf7551bb8a8b795fad7e7226\\constraintlayout-solver-2.0.1.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\listenablefuture\\1.0\\c949a840a6acbc5268d088e47b04177bf90b3cad\\listenablefuture-1.0.jar;C:\\Users\\Aluno\\.gradle\\caches\\modules-2\\files-2.1\\org.jspecify\\jspecify\\1.0.0\\7425a601c1c7ec76645a78d22b8c6a627edee507\\jspecify-1.0.0.jar;C:\\Users\\Aluno\\AndroidStudioProjects\\IBGE\\app\\build\\intermediates\\java_res\\debug\\processDebugJavaRes\\out;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\f58b6d46fa1fc9ed5f5db36a310b68df\\transformed\\viewbinding-9.3.3\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\26590cf4485e826bc4d0d371a91379d5\\transformed\\material-1.12.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\a6696af015b46a653d4af7284d89e7fd\\transformed\\constraintlayout-2.0.1\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\51664641f06807c15db311a4f85b019d\\transformed\\appcompat-resources-1.6.1\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\258566c194079bbd3a3ac15d85c47d4f\\transformed\\appcompat-1.6.1\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\2bb557644280798c53581cb951f18f0d\\transformed\\material3\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\fd73454c6720781220a2f9247713f670\\transformed\\material\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\830064ef66228ab8fab276f24df1205b\\transformed\\material-ripple\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\4d1ac247e4e19badc9f20300cf40ef8b\\transformed\\foundation\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\dc4b42d26792f07404397242dd708e35\\transformed\\animation\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\3c79dc0caee1675b3962c1f7ccfe975d\\transformed\\foundation-layout\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\c51df7e0e723c84e4f6768d8e6659034\\transformed\\animation-core\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\3dc82cdef6fb7c21b968ddbe77f03169\\transformed\\ui-tooling-data\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\6397b7c4e66facb6efc622de96592c8e\\transformed\\ui-unit\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e0484bd4c123f5ecba213c1fe03d8aa0\\transformed\\ui-geometry\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\02297bbec33f56201babe3ccf8f2a4ee\\transformed\\ui-util\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\f640d6721e943b07844de3200ccff77d\\transformed\\ui-text\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\c89fc8269a79123ad46ddb378f4e389d\\transformed\\ui-tooling-preview\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\754be9b94b195b6252629821b248bf34\\transformed\\ui-tooling\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\a69911c3df723a1e8e3fec2f6f4acffb\\transformed\\ui-graphics\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\7bce14f0509ebb2c29657d27068a4984\\transformed\\navigationevent\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\da1b07d8283377b5e4c9c9ef0c1af0d3\\transformed\\navigationevent-compose\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\ac61432986f63bd9fdab0d131d36126c\\transformed\\material-icons-extended-release\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\8b39b8f7a37f4cdc19694d124b6cb0cf\\transformed\\material-icons-core-release\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\f70164d22ffe69da7432e14d733b54c1\\transformed\\ui\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\a616855e42e177d54696d73d927c781a\\transformed\\ui-test-manifest-1.10.4\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\415710f6bf2708962d44393c30f1b38e\\transformed\\viewpager2-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\2952b562db64e20539c038a1e34c839b\\transformed\\fragment-1.3.6\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\c14c6615844d87642678464e960fa6ca\\transformed\\activity-ktx-1.13.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\f9c05bfe24d6ec9e9685d5178b081158\\transformed\\activity-1.13.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\4c7dbb9f13b68be5f88ab374ec70a3b5\\transformed\\activity-compose-1.13.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\5a06c89f67df72390605ead9b40a7dc0\\transformed\\coordinatorlayout-1.1.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e23af56ce0a7cf653ee8fcb9afee8238\\transformed\\drawerlayout-1.1.1\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\06da1bf1094bc6ac485e2524839644d8\\transformed\\transition-1.6.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\32b48784297f500c456c192c420b4059\\transformed\\dynamicanimation-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\fec75aa9060a108b026548434a28de47\\transformed\\vectordrawable-animated-1.1.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\9e9610a831ce7c2924e604b3bf551765\\transformed\\vectordrawable-1.1.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e62f446f33056d0fe8745273d3886551\\transformed\\recyclerview-1.1.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\74dd422aa1a16bac156cdf8637772fd1\\transformed\\viewpager-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\6902ca3689b4ee3b9fa9b150c7893643\\transformed\\customview-1.1.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\5d378db96e218e6b96a4caba00565b35\\transformed\\legacy-support-core-utils-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\5930b1d711875e4c2b1b19ca64b31a82\\transformed\\loader-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d7a8b7013e77102dba963c6cef0a6278\\transformed\\autofill-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\67d548da1d0cc88f28a7285d1e2df3bc\\transformed\\window-core\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\a511295d029ba6de1152682dd7aac7b8\\transformed\\window-1.5.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\c4986329ece4f677320f9f280be890f9\\transformed\\graphics-path-1.0.1\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\ee5c69dce3d681b8eddf4060a736e2c7\\transformed\\emoji2-views-helper-1.4.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0e615293663113f58b46bb02637ade14\\transformed\\emoji2-1.4.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0e615293663113f58b46bb02637ade14\\transformed\\emoji2-1.4.0\\jars\\libs\\repackaged.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\b28c915bcf050f41524c8baba68c23ed\\transformed\\core-1.19.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\c253f9afc3fab5e39a64f1e05c9b3c08\\transformed\\customview-poolingcontainer-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\9c93675cd1982d6bba56b87c66751fdd\\transformed\\lifecycle-process-2.9.4\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\5f2d09ca406904f366dde19cfeca21c9\\transformed\\lifecycle-livedata-core-ktx-2.9.4\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\7ba6c8518d77ad3e5f9d44b2986da4e4\\transformed\\lifecycle-runtime-ktx\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\18ed62463275c8262d00ee42c1a5b3a2\\transformed\\lifecycle-livedata-2.9.4\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\5a3a7f6c019167effba503c05bdb91a5\\transformed\\lifecycle-viewmodel-ktx-2.9.4\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\137bf31ca045ff46eb484f0ad582b928\\transformed\\lifecycle-livedata-core-2.9.4\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\7c740420d8a33f261b27330fc069462c\\transformed\\lifecycle-viewmodel-2.9.4\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\ae644cea6eb4b40d6aed639f373f1f05\\transformed\\lifecycle-viewmodel-release\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\55915e773e8aea649a503e98a715ab23\\transformed\\runtime-annotation\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\459535134886c76319c30caf08a1f2c7\\transformed\\runtime-retain\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\5e7b3fe00a1aca7d49540791c32ddc29\\transformed\\savedstate-release\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0b90fd4865482de85eb0fe64f62d4918\\transformed\\savedstate-ktx-1.3.2\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0ec95428b4e3de8c0cf7f7aa2cb25875\\transformed\\savedstate-compose\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\06da13f074aaf790d177799dabb431a7\\transformed\\runtime\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\ff69810683282c2a440d7c2c116bb40a\\transformed\\runtime-saveable\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\7af2dbdd9cf33287c36e20a89450a2d1\\transformed\\lifecycle-runtime-compose-release\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\5ec62c3619d2d59a35f67acdc5267910\\transformed\\lifecycle-runtime-release\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\ed25828bd3ee1f67975eab23eaebf53a\\transformed\\lifecycle-viewmodel-savedstate-release\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\0c8cabdbd20c864d17317b15ad3aaca3\\transformed\\core-ktx-1.19.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\723db278901184f5ad70dc007cfbb783\\transformed\\core-viewtree-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\8422452a2e42663165a132a7928ff128\\transformed\\annotation-experimental-1.4.1\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e1de03d7b2f5f6d147069b2c9c0401ee\\transformed\\cardview-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\dfcbf830ab3ee7f69ddfd9c244aba736\\transformed\\cursoradapter-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\19656f54e42b5354537c7d01e0b4370f\\transformed\\profileinstaller-1.4.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d53a7f7f2c6b0e0b32cb818244120814\\transformed\\startup-runtime-1.1.1\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\e9981decbce783c01bd01787b7345dc5\\transformed\\tracing-1.2.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\64a33280bdfbd3c5401b9570df464512\\transformed\\interpolator-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\6f1844fee6b8bb82f5252a2684675542\\transformed\\versionedparcelable-1.1.1\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\40da2b629e4d2a87e1fafbcf28a69a74\\transformed\\documentfile-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d3b75323bd916e97931dcca4e898bba6\\transformed\\localbroadcastmanager-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\262f25e46058af9c92abcadf5cff4714\\transformed\\print-1.0.0\\jars\\classes.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\22fb436a6a48ac9972cf34e2558c6818\\transformed\\core-runtime-2.2.0\\jars\\classes.jar;C:\\Users\\Aluno\\AndroidStudioProjects\\IBGE\\app\\build\\intermediates\\compile_and_runtime_r_class_jar\\debug\\processDebugResources\\R.jar;C:\\Users\\Aluno\\.gradle\\caches\\9.5.0\\transforms\\d863d78a777b78098925e96d1f9b5002\\transformed\\android.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MarkStackSizeMax                         = 536870912                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 536870912                                 {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832704                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122945536                              {pd product} {ergonomic}
+     bool PerfDisableSharedMem                     = true                                      {product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122880000                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 536870912                              {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Release file:
+<release file has not been read>
+Environment Variables:
+PATH=C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Users\Aluno\AppData\Local\Programs\Python\Python314\Scripts\;C:\Users\Aluno\AppData\Local\Programs\Python\Python314\;C:\Users\Aluno\AppData\Local\Microsoft\WindowsApps;C:\Users\Aluno\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Aluno\.dotnet\tools;C:\Users\Aluno\AppData\Roaming\npm
+USERNAME=Aluno
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 186 Stepping 3, GenuineIntel
+TMP=C:\Users\Aluno\AppData\Local\Temp
+TEMP=C:\Users\Aluno\AppData\Local\Temp
+
+
+
+
+Compilation memory statistics disabled.
+
+Periodic native trim disabled
+
+JNI global refs:
+JNI global refs: 0, weak refs: 0
+
+JNI global refs memory usage: 0, weak refs: 0
+
+Process memory usage:
+Resident Set Size: 14420K (0% of 16400672K total physical memory with 907312K free physical memory)
+
+OOME stack traces (most recent first):
+Classloader memory used:
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 26100 (10.0.26100.9168)
+OS uptime: 17 days 2:44 hours
+Hyper-V role detected
+
+CPU: total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 186 stepping 3 microcode 0x6134, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv, serialize, rdtscp, rdpid, fsrm, gfni, f16c, cet_ibt, cet_ss
+Processor Information for processor 0
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+Processor Information for processor 1
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+Processor Information for processor 2
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+Processor Information for processor 3
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+Processor Information for processor 4
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+Processor Information for processor 5
+  Max Mhz: 1600, Current Mhz: 1466, Mhz Limit: 1600
+Processor Information for processor 6
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+Processor Information for processor 7
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+Processor Information for processor 8
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+Processor Information for processor 9
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+Processor Information for processor 10
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+Processor Information for processor 11
+  Max Mhz: 1600, Current Mhz: 1600, Mhz Limit: 1600
+
+Memory: 4k page, system-wide physical 16016M (886M free)
+TotalPageFile size 16016M (AvailPageFile size 87M)
+current process WorkingSet (physical memory assigned to process): 14M, peak: 14M
+current process commit charge ("private bytes"): 64M, peak: 316M
+
+vm_info: OpenJDK 64-Bit Server VM (25.0.2+-15348964-b329.117) for windows-amd64 JRE (25.0.2+-15348964-b329.117), built on 2026-05-05T18:25:19Z with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
