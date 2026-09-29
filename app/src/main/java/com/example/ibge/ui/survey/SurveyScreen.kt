@@ -71,7 +71,7 @@ fun SurveyScreen(
                 }
             } else {
                 Text(
-                    text = "Pesquisa Presidencial Histórica",
+                    text = "Pesquisa Presidencial",
                     style = MaterialTheme.typography.headlineSmall,
                     color = MaterialTheme.colorScheme.primary
                 )

@@ -11,18 +11,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IBGE">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.IBGE"
-            android:windowSoftInputMode="adjustResize">
+            android:theme="@style/Theme.IBGE">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.IBGE" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.IBGE" />
+
+        <activity
+            android:name=".SurveyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.IBGE" />
+
     </application>
 
 </manifest>
