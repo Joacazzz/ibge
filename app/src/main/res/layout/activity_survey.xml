@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pesquisa Presidencial Histórica"
+        android:text="Pesquisa Presidencial 2026"
         android:textSize="22sp"
         android:textStyle="bold"
         android:layout_marginBottom="8dp" />
@@ -17,8 +17,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Em qual destes presidentes você votaria?"
-        android:textSize="16sp"
+        android:text="Em qual destes canditatos você votaria neste ano"
+        android:textSize="13sp"
         android:layout_marginBottom="24dp" />
 
     <RadioGroup
@@ -39,7 +39,7 @@
             android:id="@+id/rbFhc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fernando Henrique"
+            android:text="Fernando Henrique Cardoso"
             android:textSize="16sp"
             android:padding="8dp" />
 
@@ -47,7 +47,7 @@
             android:id="@+id/rbJango"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="João Goulart"
+            android:text="João 'Jango' Goulart"
             android:textSize="16sp"
             android:padding="8dp" />
 
@@ -64,7 +64,7 @@
         android:id="@+id/btnSubmitVote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enviar Voto"
+        android:text="Próximo"
         android:padding="12dp" />
 
 </LinearLayout>

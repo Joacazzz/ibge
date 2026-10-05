@@ -1,5 +1,6 @@
 package com.example.ibge
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.Toast
@@ -22,7 +23,10 @@ class SurveyActivity : AppCompatActivity() {
             } else {
                 val selectedRadioButton = findViewById<RadioButton>(selectedId)
                 val candidate = selectedRadioButton.text.toString()
-                Toast.makeText(this, "Voto registrado em $candidate! Obrigado.", Toast.LENGTH_LONG).show()
+
+                val intent = Intent(this, ReasonActivity::class.java)
+                intent.putExtra("CANDIDATE", candidate)
+                startActivity(intent)
                 finish()
             }
         }
