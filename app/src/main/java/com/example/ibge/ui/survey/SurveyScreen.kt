@@ -23,7 +23,9 @@ fun SurveyScreen(
         "Getúlio Vargas",
         "Fernando Henrique",
         "João Goulart",
-        "Nilo Peçanha"
+        "Nilo Peçanha",
+        "Juscelino Kubitschek",
+        "Outros",
     )
 
     val reasonOptions = listOf(
@@ -31,7 +33,8 @@ fun SurveyScreen(
         "Saúde",
         "Saneamento básico",
         "Segurança pública",
-        "Desenvolvimento econômico"
+        "Desenvolvimento econômico",
+        "Tecnologia e Infraestrutura",
     )
 
     var currentStep by remember { mutableIntStateOf(1) }
